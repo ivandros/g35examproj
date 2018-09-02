@@ -3,11 +3,13 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static libs.Utils.waitABit;
 
 public class AddCampaignPage extends ParentPage {
-
+    WebDriverWait webDriverWait10;
     @FindBy(id = "name")
     private WebElement campaignNameInput;
     @FindBy(id = "cuselFrame-campaignTypes")
@@ -20,6 +22,8 @@ public class AddCampaignPage extends ParentPage {
     private WebElement trackingSwitch;
     @FindBy(id = "conversion_switch")
     private WebElement conversionSwitch;
+    @FindBy(id = "valueUrl-buy")
+    private WebElement conditionTypeInput;
     @FindBy(xpath = ".//a[@class = 'button confirm green']")
     private WebElement buttonApply;
     @FindBy(xpath = ".//a[@class = 'button save green']")
@@ -33,6 +37,7 @@ public class AddCampaignPage extends ParentPage {
 
     public AddCampaignPage(WebDriver webDriver) {
         super(webDriver, "/advertisers/add");
+        webDriverWait10 = new WebDriverWait(webDriver, 10);
     }
 
     public void enterCampaignName(String campaignName) {
@@ -51,41 +56,43 @@ public class AddCampaignPage extends ParentPage {
 
     public void clickTargetingSwitch() {
         actionsWithOurElements.clickOnElement(targetingSwitch);
-        waitABit(1);
+//        waitABit(1);
     }
 
     public void clickTrackingSwitch() {
         actionsWithOurElements.clickOnElement(trackingSwitch);
-        waitABit(1);
+//        waitABit(1);
     }
 
     public void clickConversionSwitch() {
         actionsWithOurElements.clickOnElement((conversionSwitch));
-        waitABit(1);
+        webDriverWait10.until(ExpectedConditions.invisibilityOf(conditionTypeInput));
+        //        waitABit(1);
     }
 
     public void clickButtonApply() {
+
         actionsWithOurElements.clickOnElement(buttonApply);
-        waitABit(1);
+//        waitABit(1);
     }
 
     public void clickButtonSaveAndContinue() {
         actionsWithOurElements.clickOnElement(buttonSaveAndContinue);
-        waitABit(1);
+//        waitABit(1);
     }
 
     public void clickButtonCancel() {
         actionsWithOurElements.clickOnElement(buttonCancel);
-        waitABit(1);
+//        waitABit(1);
     }
 
     public void clickButtonSave() {
         actionsWithOurElements.clickOnElement(buttonSave);
-        waitABit(1);
+//        waitABit(1);
     }
 
     public void clickButtonAddTeaser() {
         actionsWithOurElements.clickOnElement(buttonGoOver);
-        waitABit(1);
+//        waitABit(1);
     }
 }

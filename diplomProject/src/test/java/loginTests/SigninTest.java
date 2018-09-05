@@ -9,8 +9,8 @@ public class SigninTest extends ParentTest {
     @Test
     public void validLogin(){
         signinPage.openPage();
-        signinPage.enterEmail("equimosis@bigmir.net");
-        signinPage.enterPassword("QalightG35");
+        signinPage.enterEmail("test_sok_2018_09_05@mailinator.com");
+        signinPage.enterPassword("12345678");
         signinPage.clickOnSubmitButton();
 
         checkAcceptanceCriteria("Logo isn't present.", advertisersPage.isLogoPresent(), true);

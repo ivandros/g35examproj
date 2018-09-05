@@ -29,10 +29,10 @@ public class LoginTestWithOutPageObject {
         webDriver.get("https://dashboard.marketgid.com/user/signin");
 
         webDriver.findElement(By.id("login")).clear();
-        webDriver.findElement(By.id("login")).sendKeys("equimosis@bigmir.net");
+        webDriver.findElement(By.id("login")).sendKeys("test_sok_2018_09_05@mailinator.com");
 
         webDriver.findElement(By.id("password")).clear();
-        webDriver.findElement(By.id("password")).sendKeys("QalightG35");
+        webDriver.findElement(By.id("password")).sendKeys("12345678");
 
         webDriver.findElement(By.id("signin")).click();
 

@@ -15,6 +15,6 @@ public class SigninTest extends ParentTest {
 
         checkAcceptanceCriteria("Logo isn't present.", advertisersPage.isLogoPresent(), true);
         checkAcceptanceCriteria("Exit isn't present.", advertisersPage.isExitPresent(), true);
-        checkAcceptanceCriteria("Validation message is present.", signinPage.isValidationPresent(), true);
+        checkAcceptanceCriteria("Validation message is present.", !signinPage.isValidationPresent(), true);
     }
 }

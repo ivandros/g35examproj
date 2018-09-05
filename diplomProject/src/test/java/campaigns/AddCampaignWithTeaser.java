@@ -17,7 +17,7 @@ public class AddCampaignWithTeaser extends ParentTest {
 
     @Test
     public void addNewCampaignWithTeaser() throws InterruptedException {
-        signinPage.userSignIn("equimosis@bigmir.net", "QalightG35");
+        signinPage.userSignIn("test_sok_2018_09_05@mailinator.com", "12345678");
         advertisersPage.clickOnAddCampaignButton();
         addCampaignPage.checkCurrentUrl();
         addCampaignPage.enterCampaignName(campaignName);
@@ -25,8 +25,8 @@ public class AddCampaignWithTeaser extends ParentTest {
         addCampaignPage.selectCampaignCategory("Авто");
         addCampaignPage.clickTargetingSwitch();
         addCampaignPage.clickButtonApply();
-        addCampaignPage.clickTrackingSwitch();
         addCampaignPage.clickConversionSwitch();
+        addCampaignPage.clickTrackingSwitch();
         addCampaignPage.clickButtonSave();
         addCampaignPage.clickButtonSaveAndContinue();
         addCampaignPage.clickButtonAddTeaser();
@@ -36,7 +36,6 @@ public class AddCampaignWithTeaser extends ParentTest {
         addTeaserPage.enterTeaserText(teaserText);
         addTeaserPage.enterTeaserPictureLink(pictureLink);
         addTeaserPage.enterTeaserBid(teaserBid);
-        waitABit(1);
         addTeaserPage.clickButtonSaveAndGoToList();
         teasersCampaignPage.checkCurrentUrl();
         teasersCampaignPage.isPopupPresent();

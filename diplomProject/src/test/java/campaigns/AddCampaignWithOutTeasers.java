@@ -12,7 +12,7 @@ public class AddCampaignWithOutTeasers extends ParentTest {
 
     @Test
     public void addNewCampaignWithOutTeasers() throws InterruptedException {
-        signinPage.userSignIn("equimosis@bigmir.net", "QalightG35");
+        signinPage.userSignIn("test_sok_2018_09_05@mailinator.com", "12345678");
         advertisersPage.clickOnAddCampaignButton();
         addCampaignPage.checkCurrentUrl();
         addCampaignPage.enterCampaignName(campaignName);
@@ -20,8 +20,8 @@ public class AddCampaignWithOutTeasers extends ParentTest {
         addCampaignPage.selectCampaignCategory("Авто");
         addCampaignPage.clickTargetingSwitch();
         addCampaignPage.clickButtonApply();
-        addCampaignPage.clickTrackingSwitch();
         addCampaignPage.clickConversionSwitch();
+        addCampaignPage.clickTrackingSwitch();
         addCampaignPage.clickButtonSave();
         addCampaignPage.clickButtonSaveAndContinue();
         addCampaignPage.clickButtonCancel();

@@ -61,13 +61,15 @@ public class AddCampaignPage extends ParentPage {
 
     public void clickTrackingSwitch() {
         actionsWithOurElements.clickOnElement(trackingSwitch);
+//        webDriverWait10.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//div[@id='tracking_switch']/div[@class = 'off']")));
+
 //        waitABit(1);
     }
 
     public void clickConversionSwitch() {
+//        waitABit(1);
+//        webDriverWait10.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//div[@id='tracking_switch']/div[@class = 'off']")));
         actionsWithOurElements.clickOnElement((conversionSwitch));
-        webDriverWait10.until(ExpectedConditions.invisibilityOf(conditionTypeInput));
-        //        waitABit(1);
     }
 
     public void clickButtonApply() {
@@ -87,6 +89,7 @@ public class AddCampaignPage extends ParentPage {
     }
 
     public void clickButtonSave() {
+        webDriverWait10.until(ExpectedConditions.invisibilityOf(conditionTypeInput));
         actionsWithOurElements.clickOnElement(buttonSave);
 //        waitABit(1);
     }
